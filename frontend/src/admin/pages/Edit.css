@@ -1,0 +1,1232 @@
+/* Save Notification */
+.save-notification {
+  background: #d1fae5;
+  color: #047857;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Edit Tabs */
+.edit-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.edit-tab {
+  padding: 0.75rem 1.25rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-tab:hover {
+  border-color: #2d5f3f;
+  color: #2d5f3f;
+}
+
+.edit-tab.active {
+  background: #2d5f3f;
+  border-color: #2d5f3f;
+  color: white;
+}
+
+/* Edit Section */
+.edit-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.edit-section .section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* Edit Group */
+.edit-group {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.edit-group:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1.5rem;
+}
+
+.group-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d5f3f;
+  margin: 0 0 1rem 0;
+}
+
+/* Form Row */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #1f2937;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2d5f3f;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(45, 95, 63, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Save Button */
+.save-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #2d5f3f 0%, #3d7f5f 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45, 95, 63, 0.3);
+}
+
+/* Items List (Gallery & Cards) */
+.items-list {
+  margin-top: 2rem;
+}
+
+.items-list .group-title {
+  margin-bottom: 1rem;
+}
+
+.no-items {
+  color: #6b7280;
+  font-style: italic;
+  padding: 1rem;
+  text-align: center;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+/* Item Card */
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.item-card:hover {
+  background: #f3f4f6;
+}
+
+.item-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.item-thumbnail {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-color: #e5e7eb;
+  flex-shrink: 0;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.item-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.item-info small {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Item Actions */
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn,
+.cancel-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.edit-btn:hover {
+  background: #bfdbfe;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #4b5563;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+.save-btn.small,
+.edit-btn.small,
+.delete-btn.small,
+.cancel-btn.small {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* Item Edit Form */
+.item-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.item-edit-form input,
+.item-edit-form textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1f2937;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.item-edit-form input:focus,
+.item-edit-form textarea:focus {
+  outline: none;
+  border-color: #2d5f3f;
+  box-shadow: 0 0 0 3px rgba(45, 95, 63, 0.1);
+}
+
+.item-edit-form .item-actions {
+  margin-top: 0.5rem;
+}
+
+/* Gallery Grid Section (4 columns) */
+.gallery-grid-section {
+  margin-top: 2rem;
+}
+
+.gallery-grid-section .group-title {
+  margin-bottom: 1.5rem;
+}
+
+.gallery-grid-admin {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-grid-item {
+  background: #f9fafb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-grid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-grid-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-color: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery-grid-image:hover {
+  opacity: 0.9;
+}
+
+.gallery-grid-info {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.gallery-grid-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gallery-grid-order {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.gallery-grid-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem 1rem;
+}
+
+.gallery-grid-actions .edit-btn,
+.gallery-grid-actions .delete-btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* Gallery Edit Form (in grid) */
+.gallery-edit-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.gallery-edit-form input {
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #1f2937;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.gallery-edit-form input:focus {
+  outline: none;
+  border-color: #2d5f3f;
+  box-shadow: 0 0 0 3px rgba(45, 95, 63, 0.1);
+}
+
+.gallery-edit-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.gallery-edit-actions .save-btn,
+.gallery-edit-actions .cancel-btn {
+  flex: 1;
+  margin-top: 0;
+}
+
+/* Fullscreen Overlay */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.fullscreen-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.fullscreen-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0.5rem;
+}
+
+.fullscreen-close:hover {
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.fullscreen-info {
+  text-align: center;
+  color: white;
+}
+
+.fullscreen-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.fullscreen-info p {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.fullscreen-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.fullscreen-edit-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fullscreen-edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+}
+
+.fullscreen-delete-btn {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fullscreen-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+/* Fullscreen Navigation Arrows */
+.fullscreen-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: white;
+  font-size: 4rem;
+  width: 70px;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.fullscreen-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.fullscreen-prev {
+  left: 2rem;
+}
+
+.fullscreen-next {
+  right: 2rem;
+}
+
+.fullscreen-counter {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Floating Edit Card */
+.floating-edit-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-width: 350px;
+  max-width: 90vw;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  animation: floatIn 0.3s ease;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.floating-edit-card h4 {
+  margin: 0 0 1.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+}
+
+.floating-edit-field {
+  margin-bottom: 1rem;
+}
+
+.floating-edit-field label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.floating-edit-field input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1f2937;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.floating-edit-field input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.floating-edit-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.floating-save-btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.floating-save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.floating-cancel-btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.floating-cancel-btn:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Section Header Row */
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.section-header-row .section-title {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Recycle Bin Toggle */
+.recycle-bin-toggle {
+  padding: 0.6rem 1.2rem;
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recycle-bin-toggle:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+  background: #fef2f2;
+}
+
+.recycle-bin-toggle.active {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+/* Recycle Bin Section */
+.recycle-bin-section {
+  background: #fef2f2;
+  border: 2px dashed #fca5a5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.recycle-bin-section .group-title {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.recycle-bin-section .no-items {
+  background: white;
+}
+
+/* Deleted Item Styling */
+.gallery-grid-item.deleted-item {
+  opacity: 0.85;
+  border: 2px solid #fca5a5;
+}
+
+.gallery-grid-item.deleted-item .gallery-grid-image {
+  filter: grayscale(30%);
+}
+
+/* Restore Button */
+.restore-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #d1fae5;
+  color: #047857;
+}
+
+.restore-btn:hover {
+  background: #a7f3d0;
+}
+
+.restore-btn.small {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+/* Tablet - 3 columns */
+@media (max-width: 1200px) {
+  .gallery-grid-admin {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile - 2 columns */
+@media (max-width: 768px) {
+  .edit-tabs {
+    flex-direction: column;
+  }
+
+  .edit-tab {
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .edit-section {
+    padding: 1.5rem;
+  }
+
+  .item-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .item-preview {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-thumbnail {
+    width: 100%;
+    height: 120px;
+  }
+
+  .item-actions {
+    justify-content: flex-end;
+  }
+
+  .gallery-grid-admin {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-grid-image {
+    height: 140px;
+  }
+
+  .fullscreen-overlay {
+    padding: 1rem;
+  }
+
+  .fullscreen-close {
+    top: -40px;
+    font-size: 2rem;
+  }
+
+  .fullscreen-image {
+    max-height: 60vh;
+  }
+
+  .fullscreen-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .fullscreen-actions {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .fullscreen-edit-btn,
+  .fullscreen-delete-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .fullscreen-nav {
+    width: 50px;
+    height: 70px;
+    font-size: 2.5rem;
+  }
+
+  .fullscreen-prev {
+    left: 0.5rem;
+  }
+
+  .fullscreen-next {
+    right: 0.5rem;
+  }
+}
+
+/* Small mobile - 1 column */
+@media (max-width: 480px) {
+  .gallery-grid-admin {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid-image {
+    height: 200px;
+  }
+}
+
+/* Image Source Toggle */
+.image-source-toggle {
+  display: flex;
+  gap: 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.source-toggle-btn {
+  padding: 0.75rem 1.5rem;
+  background: #f9fafb;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.source-toggle-btn:first-child {
+  border-right: 1px solid #e5e7eb;
+}
+
+.source-toggle-btn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.source-toggle-btn.active {
+  background: #2d5f3f;
+  color: white;
+}
+
+/* File Upload Area */
+.file-upload-area {
+  border: 2px dashed #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.file-upload-area:hover {
+  border-color: #2d5f3f;
+}
+
+.file-upload-label {
+  display: block;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.file-upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.file-upload-icon {
+  width: 50px;
+  height: 50px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.file-upload-label:hover .file-upload-icon {
+  background: #d1fae5;
+  color: #2d5f3f;
+}
+
+.file-upload-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.file-upload-hint {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* File Preview */
+.file-preview-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.file-preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.file-remove-btn {
+  padding: 0.5rem 1.25rem;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-remove-btn:hover {
+  background: #fecaca;
+}
+
+.file-name {
+  font-size: 0.85rem;
+  color: #6b7280;
+  word-break: break-all;
+  text-align: center;
+}
+
+/* Compact File Upload for Floating Edit Modal */
+.file-upload-area.compact .file-upload-label {
+  padding: 1rem;
+}
+
+.file-upload-area.compact .file-upload-icon {
+  width: 36px;
+  height: 36px;
+  font-size: 1.25rem;
+}
+
+.file-upload-area.compact .file-upload-text {
+  font-size: 0.9rem;
+}
+
+.file-upload-area.compact .file-upload-hint {
+  font-size: 0.8rem;
+}
+
+.file-upload-area.compact .file-preview-container {
+  padding: 0.75rem;
+  gap: 0.5rem;
+}
+
+.file-upload-area.compact .file-preview-image {
+  max-height: 120px;
+}
+
+.file-upload-area.compact .file-name {
+  font-size: 0.75rem;
+}
+
+/* Explore Card Fullscreen Styles */
+.fullscreen-short-desc {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.fullscreen-full-desc {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  max-height: 100px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+/* Enhanced Explore Floating Edit Card */
+.explore-floating-edit {
+  min-width: 650px;
+  max-width: 750px;
+  width: 750px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 10px 25px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.explore-floating-edit h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+.explore-floating-edit .floating-edit-field {
+  margin-bottom: 1.25rem;
+}
+
+.explore-floating-edit .floating-edit-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+.explore-floating-edit .floating-edit-field input {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #1f2937;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.explore-floating-edit .floating-edit-field input:focus {
+  outline: none;
+  border-color: #2d5f3f;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(45, 95, 63, 0.1);
+}
+
+.explore-floating-edit .floating-edit-field input::placeholder {
+  color: #9ca3af;
+}
+
+.explore-floating-edit textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 0.9rem 1.1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1f2937;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.explore-floating-edit textarea:focus {
+  outline: none;
+  border-color: #2d5f3f;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(45, 95, 63, 0.1);
+}
+
+.explore-floating-edit textarea::placeholder {
+  color: #9ca3af;
+}
+
+.explore-floating-edit .floating-edit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.explore-floating-edit .floating-save-btn {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #2d5f3f 0%, #3d7a52 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.explore-floating-edit .floating-save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 95, 63, 0.4);
+}
+
+.explore-floating-edit .floating-cancel-btn {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.explore-floating-edit .floating-cancel-btn:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Responsive adjustments for explore floating edit */
+@media (max-width: 600px) {
+  .explore-floating-edit {
+    min-width: auto;
+    width: 95vw;
+    max-width: 95vw;
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .explore-floating-edit h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .explore-floating-edit .floating-edit-field input,
+  .explore-floating-edit textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .explore-floating-edit .floating-edit-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .explore-floating-edit .floating-save-btn,
+  .explore-floating-edit .floating-cancel-btn {
+    width: 100%;
+  }
+}

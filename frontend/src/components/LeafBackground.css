@@ -1,0 +1,55 @@
+.leaf-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.leaf-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.leaf-bg-image.current {
+  opacity: 1;
+}
+
+.leaf-bg-image.current.fading-out {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.leaf-bg-image.next.fading-in {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Overlay to make images subtle */
+.leaf-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 250, 245, 0.35);
+  pointer-events: none;
+}
+
+/* Dark mode overlay */
+[data-theme="dark"] .leaf-bg-overlay {
+  background: rgba(15, 15, 15, 0.20);
+}
+
+/* Show on all screen sizes including mobile */
