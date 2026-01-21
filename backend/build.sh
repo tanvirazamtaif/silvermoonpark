@@ -11,5 +11,5 @@ python manage.py collectstatic --no-input
 # Run migrations
 python manage.py migrate
 
-# Seed production database with initial data
-python manage.py seed_production
+# Seed production database with initial data (optional, don't fail build)
+python manage.py seed_production || echo "Seeding skipped or already done"
