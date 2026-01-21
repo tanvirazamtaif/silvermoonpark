@@ -81,25 +81,25 @@ class Command(BaseCommand):
         explore_cards = [
             {
                 'title': 'Luxury Cottages',
-                'description': 'Experience comfort in our beautifully designed cottages surrounded by nature.',
+                'short_description': 'Experience comfort in our beautifully designed cottages surrounded by nature.',
                 'image_url': '/WhatsApp Image 2026-01-14 at 5.37.32 PM.jpeg',
                 'order': 1,
             },
             {
                 'title': 'Swimming Pool',
-                'description': 'Relax and refresh in our pristine swimming pool with scenic views.',
+                'short_description': 'Relax and refresh in our pristine swimming pool with scenic views.',
                 'image_url': '/WhatsApp Image 2026-01-14 at 5.37.33 PM.jpeg',
                 'order': 2,
             },
             {
                 'title': 'Restaurant',
-                'description': 'Savor delicious cuisine at our on-site restaurant serving local and international dishes.',
+                'short_description': 'Savor delicious cuisine at our on-site restaurant serving local and international dishes.',
                 'image_url': '/WhatsApp Image 2026-01-14 at 5.37.39 PM.jpeg',
                 'order': 3,
             },
             {
                 'title': 'Event Venue',
-                'description': 'Host your special events in our elegant venue with professional services.',
+                'short_description': 'Host your special events in our elegant venue with professional services.',
                 'image_url': '/WhatsApp Image 2026-01-14 at 5.38.12 PM.jpeg',
                 'order': 4,
             },
