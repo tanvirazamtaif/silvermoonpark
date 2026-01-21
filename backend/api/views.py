@@ -52,17 +52,18 @@ class RoomBookingViewSet(viewsets.ModelViewSet):
             booking.status = 'confirmed'
             booking.save()
 
-            # Send confirmation email to customer
-            try:
-                send_booking_confirmation_email(booking, 'room')
-                logger.info(f"Confirmation email sent for room booking #{booking.id}")
-            except Exception as e:
-                logger.error(f"Failed to send confirmation email for room booking #{booking.id}: {str(e)}")
+            # Send confirmation email to customer (disabled for free tier to avoid timeout)
+            # try:
+            #     send_booking_confirmation_email(booking, 'room')
+            #     logger.info(f"Confirmation email sent for room booking #{booking.id}")
+            # except Exception as e:
+            #     logger.error(f"Failed to send confirmation email for room booking #{booking.id}: {str(e)}")
+            logger.info(f"Room booking #{booking.id} confirmed successfully")
 
             return Response({
                 'id': booking.id,
                 'status': booking.status,
-                'message': f'Booking #{booking.id} has been confirmed. Confirmation email sent to {booking.email}'
+                'message': f'Booking #{booking.id} has been confirmed.'
             }, status=status.HTTP_200_OK)
         except Exception as e:
             return Response({
@@ -112,17 +113,18 @@ class EventBookingViewSet(viewsets.ModelViewSet):
             booking.status = 'confirmed'
             booking.save()
 
-            # Send confirmation email to customer
-            try:
-                send_booking_confirmation_email(booking, 'event')
-                logger.info(f"Confirmation email sent for event booking #{booking.id}")
-            except Exception as e:
-                logger.error(f"Failed to send confirmation email for event booking #{booking.id}: {str(e)}")
+            # Send confirmation email to customer (disabled for free tier to avoid timeout)
+            # try:
+            #     send_booking_confirmation_email(booking, 'event')
+            #     logger.info(f"Confirmation email sent for event booking #{booking.id}")
+            # except Exception as e:
+            #     logger.error(f"Failed to send confirmation email for event booking #{booking.id}: {str(e)}")
+            logger.info(f"Event booking #{booking.id} confirmed successfully")
 
             return Response({
                 'id': booking.id,
                 'status': booking.status,
-                'message': f'Booking #{booking.id} has been confirmed. Confirmation email sent to {booking.email}'
+                'message': f'Booking #{booking.id} has been confirmed.'
             }, status=status.HTTP_200_OK)
         except Exception as e:
             return Response({
