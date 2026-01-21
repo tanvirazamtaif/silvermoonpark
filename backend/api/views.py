@@ -24,12 +24,13 @@ class RoomBookingViewSet(viewsets.ModelViewSet):
         if serializer.is_valid():
             booking = serializer.save()
 
-            # Send email notification
-            try:
-                notification_results = send_room_booking_notification(booking)
-                logger.info(f"Room booking #{booking.id} notifications sent: {notification_results}")
-            except Exception as e:
-                logger.error(f"Failed to send notifications for room booking #{booking.id}: {str(e)}")
+            # Send email notification (skip in production free tier to avoid timeout)
+            # try:
+            #     notification_results = send_room_booking_notification(booking)
+            #     logger.info(f"Room booking #{booking.id} notifications sent: {notification_results}")
+            # except Exception as e:
+            #     logger.error(f"Failed to send notifications for room booking #{booking.id}: {str(e)}")
+            logger.info(f"Room booking #{booking.id} created successfully")
 
             return Response({
                 'id': booking.id,
@@ -83,12 +84,13 @@ class EventBookingViewSet(viewsets.ModelViewSet):
         if serializer.is_valid():
             booking = serializer.save()
 
-            # Send email notification
-            try:
-                notification_results = send_event_booking_notification(booking)
-                logger.info(f"Event booking #{booking.id} notifications sent: {notification_results}")
-            except Exception as e:
-                logger.error(f"Failed to send notifications for event booking #{booking.id}: {str(e)}")
+            # Send email notification (skip in production free tier to avoid timeout)
+            # try:
+            #     notification_results = send_event_booking_notification(booking)
+            #     logger.info(f"Event booking #{booking.id} notifications sent: {notification_results}")
+            # except Exception as e:
+            #     logger.error(f"Failed to send notifications for event booking #{booking.id}: {str(e)}")
+            logger.info(f"Event booking #{booking.id} created successfully")
 
             return Response({
                 'id': booking.id,
