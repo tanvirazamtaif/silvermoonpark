@@ -3,12 +3,34 @@ from rest_framework.response import Response
 from rest_framework.decorators import action, api_view
 from rest_framework.views import APIView
 from django.db import models
+from django.core.management import call_command
+from io import StringIO
 from .models import RoomBooking, EventBooking, SiteContent, GalleryImage, ExploreCard, HeroSlide
 from .serializers import RoomBookingSerializer, EventBookingSerializer, SiteContentSerializer, GalleryImageSerializer, ExploreCardSerializer, HeroSlideSerializer
 from .notifications import send_room_booking_notification, send_event_booking_notification, send_booking_confirmation_email
 import logging
 
 logger = logging.getLogger(__name__)
+
+
+@api_view(['GET', 'POST'])
+def seed_database(request):
+    """Trigger database seeding via API call"""
+    try:
+        out = StringIO()
+        call_command('seed_production', stdout=out)
+        output = out.getvalue()
+        return Response({
+            'success': True,
+            'message': 'Database seeded successfully',
+            'output': output
+        }, status=status.HTTP_200_OK)
+    except Exception as e:
+        logger.error(f"Seed database error: {str(e)}")
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class RoomBookingViewSet(viewsets.ModelViewSet):
