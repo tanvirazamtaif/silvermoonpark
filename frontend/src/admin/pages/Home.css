@@ -677,54 +677,42 @@
 
   .calendar-section {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.5rem;
-  }
-
-  .calendar-section::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .calendar-section::-webkit-scrollbar-track {
-    background: #e5e7eb;
-    border-radius: 3px;
-  }
-
-  .calendar-section::-webkit-scrollbar-thumb {
-    background: #9ca3af;
-    border-radius: 3px;
   }
 
   .calendar-container {
-    padding: 1rem;
-    min-width: 350px;
-    width: max-content;
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .calendar-grid {
-    min-width: 300px;
+    width: 100%;
+    gap: 2px;
   }
 
   .calendar-day-name {
-    padding: 0.4rem 0.2rem;
-    font-size: 0.65rem;
+    padding: 0.3rem 0.1rem;
+    font-size: 0.6rem;
   }
 
   .calendar-day {
-    padding: 0.25rem;
-    min-height: 40px;
-    max-height: 45px;
+    padding: 0.2rem;
+    min-height: 36px;
+    max-height: 40px;
   }
 
   .day-number {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .indicator {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
+  }
+
+  .booking-indicators {
+    bottom: 2px;
   }
 
   .calendar-legend {
