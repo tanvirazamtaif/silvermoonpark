@@ -676,14 +676,16 @@
   }
 
   .calendar-section {
-    display: flex;
-    justify-content: center;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
   }
 
   .calendar-container {
     padding: 1rem;
     width: 100%;
-    max-width: 400px;
+    min-width: 320px;
   }
 
   .calendar-day-name {
